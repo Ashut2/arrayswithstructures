@@ -1,1 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+struct std{
+    char name[10];
+    int age;
+    int percentage;
+};
 
+int main()
+{
+    struct std c[3];
+    int i;
+    printf("\t\t\t\t:: Fill the details of the student ::");
+    for(i=0;i<3;i++){
+        printf("\n\nEnter details[name,age,percent] of student%d",i);
+        scanf("%s",c[i].name);
+        scanf("%d",&c[i].age);
+        scanf("%d",&c[i].percentage);
+    }
+    printf("\n\t\t\t\t:: Locked Details are here as follows::");
+    for(i=0;i<3;i++){
+        printf("\n\nStudent %d\t",i);
+        printf("%s\t\t",c[i].name);
+        printf("%d\t",c[i].age);
+        printf("%d\n ",c[i].percentage);
+    }
+    return 0;
+}
